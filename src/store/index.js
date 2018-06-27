@@ -5,8 +5,15 @@ import rootSaga from './saga'
 
 const sagaMiddleware = createSagaMiddleware()
 
-const store = createStore(rootReducer, applyMiddleware(sagaMiddleware))
+const store = createStore(rootReducer, initState, applyMiddleware(sagaMiddleware))
 
 sagaMiddleware.run(rootSaga)
 
 export default store
+
+const initState = {
+  global: {
+    list: [],
+    loading: false,
+  },
+}

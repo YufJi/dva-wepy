@@ -2,8 +2,8 @@
 
 </style>
 <template>
-  <view>index</view>
   <button type="button" name="button" @tap="getData">click</button>
+  <view>{{loading ? '加载中。。。' : '加载完成！'}}</view>
 </template>
 
 <script>
@@ -13,10 +13,14 @@
   const store = getStore();
 
   @connect({
-    carlist(state) {
-      console.log(state);
-      return state
+    carlist({ global }) {
+      const { list = [] } = global;
+      return list
     },
+    loading({ global }) {
+      const { loading = false } = global;
+      return loading
+    }
   })
   export default class Index extends wepy.page {
     config = {

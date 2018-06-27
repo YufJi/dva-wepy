@@ -1,12 +1,23 @@
 import { effects } from 'redux-saga/dist/redux-saga'
 import { getData } from './api'
 
-const { call, takeLatest } = effects
+const { call, put, takeLatest } = effects
 
 function* fetchData({ payload }) {
+  yield put({
+    type: 'toggleLoading',
+    payload: true,
+  })
   try {
     const data = yield call(getData, {})
-    console.log(data)
+    yield put({
+      type: 'SETDATA',
+      payload: data,
+    })
+    yield put({
+      type: 'toggleLoading',
+      payload: false,
+    })
   } catch (e) {
     console.log(e)
   }
