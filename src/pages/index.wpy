@@ -1,0 +1,48 @@
+<style lang="less" scoped>
+
+</style>
+<template>
+  <view>index</view>
+  <button type="button" name="button">click</button>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import { connect, getStore } from 'wepy-redux'
+
+  // const store = getStore();
+
+  // @connect({
+  //   carlist(state) {
+  //     console.log(state);
+  //     return state
+  //   },
+  // })
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: 'test'
+    }
+
+    components = {
+
+    }
+
+    mixins = []
+
+    data = {}
+
+    computed = {
+
+    }
+
+    methods = {}
+
+    events = {
+
+    }
+
+    onLoad() {
+      console.log('onLoad');
+    }
+  }
+</script>
