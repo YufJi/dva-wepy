@@ -1,5 +1,7 @@
-import { call, put, takeLatest } from 'redux-saga/effects'
+import { effects } from 'redux-saga/dist/redux-saga'
 import { getData } from './api'
+
+const { call, takeLatest } = effects
 
 function* fetchData({ payload }) {
   try {
