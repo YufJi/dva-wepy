@@ -10,7 +10,7 @@
   import wepy from 'wepy'
   import { connect, getStore } from 'wepy-redux'
 
-  const store = getStore();
+  const { dispatch } = getStore();
 
   @connect({
     carlist({ global }) {
@@ -18,7 +18,7 @@
       return list
     },
     loading({ global }) {
-      const { loading = false } = global;
+      const { loading } = global;
       return loading
     }
   })
@@ -34,7 +34,7 @@
     mixins = []
 
     data = {
-      list: [1,2,3,4]
+      list: [1, 2, 3, 4, 'end']
     }
 
     computed = {
@@ -43,7 +43,7 @@
 
     methods = {
       getData() {
-        store.dispatch({type: 'GETDATA', payload: {}})
+        dispatch({type: 'GETDATA', payload: {}})
       },
     }
 

@@ -1,5 +1,4 @@
 export default function global(state = {}, action) {
-  const { global } = state
   switch (action.type) {
     case 'SETDATA':
       return { ...state, list: action.payload }
