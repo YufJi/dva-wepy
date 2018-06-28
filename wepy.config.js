@@ -33,10 +33,7 @@ module.exports = {
         'transform-decorators-legacy',
         'transform-object-rest-spread',
         'transform-export-extensions',
-        'syntax-export-extensions',
-        'transform-async-to-generator',
-        'transform-regenerator',
-        'transform-runtime'
+        'syntax-export-extensions'
       ]
     }
   },
