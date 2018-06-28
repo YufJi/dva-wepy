@@ -2,7 +2,7 @@
 
 </style>
 <template>
-  <button type="button" name="button" @tap="getData">click</button>
+  <button type="button" name="button" @tap="getData">发请求</button>
   <view>{{loading ? '加载中。。。' : '加载完成！'}}</view>
 </template>
 
@@ -52,6 +52,8 @@
     }
 
     onLoad() {
+
+      // 利用reduce同步处理promise
       const p = function(num) {
         return new Promise((resolve, reject) => {
           setTimeout(() => {
@@ -62,6 +64,7 @@
       this.list.reduce(async(pre, cur) => {
         const data = await pre;
         console.log(data, new Date());
+        cur == 'end' && dispatch({type: 'TOGGLELOADING', payload: false})
         return p(cur)
       }, p(0))
     }
