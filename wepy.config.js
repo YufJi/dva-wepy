@@ -39,7 +39,7 @@ module.exports = {
   },
   plugins: {
     autoprefixer: {
-      filter: /\.less$/,
+      filter: /\.(less|wxss)$/,
       config: {
         browsers: [
           'Android >= 4.0',
