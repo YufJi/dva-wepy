@@ -5,7 +5,7 @@ const { call, put, takeLatest } = effects
 
 function* fetchData({ payload }) {
   yield put({
-    type: 'toggleLoading',
+    type: 'TOGGLELOADING',
     payload: true,
   })
   try {
@@ -15,7 +15,7 @@ function* fetchData({ payload }) {
       payload: data,
     })
     yield put({
-      type: 'toggleLoading',
+      type: 'TOGGLELOADING',
       payload: false,
     })
   } catch (e) {

@@ -13,6 +13,7 @@
   "author": "jyf",
   "license": "MIT",
   "dependencies": {
+    "dayjs": "^1.6.10",
     "lodash": "^4.17.5",
     "qs": "^6.5.1",
     "redux": "^3.7.2",
@@ -37,7 +38,6 @@
     "eslint-plugin-html": "^2.0.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^2.0.1",
-    "moment": "^2.22.0",
     "wepy-compiler-babel": "^1.5.1",
     "wepy-compiler-less": "^1.3.10",
     "wepy-eslint": "^1.5.3",
