@@ -20,6 +20,15 @@ function valideData(obj) {
   }
 }
 
+function catchErr(err) {
+  const { errMsg } = err
+  wx.showToast({
+    title: errMsg,
+    icon: 'none',
+    duration: 2000,
+  })
+}
+
 /**
  * Requests a URL, returning a promise.
  *
@@ -33,5 +42,5 @@ export default function request(url, options) {
     ...options
   }).then(checkStatus)
     .then(valideData)
-    .catch(err => err)
+    .catch(catchErr)
 }
