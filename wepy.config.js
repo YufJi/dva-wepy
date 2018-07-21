@@ -50,17 +50,6 @@ module.exports = {
         ]
       }
     },
-    imagemin: {
-      filter: /\.(jpg|png|jpeg)$/,
-      config: {
-        jpg: {
-          quality: 80
-        },
-        png: {
-          quality: 80
-        }
-      }
-    },
     replace: [
       {
         filter: /\.js$/,
@@ -96,16 +85,5 @@ if (prod) {
       config: {
       }
     },
-    imagemin: {
-      filter: /\.(jpg|png|jpeg)$/,
-      config: {
-        jpg: {
-          quality: 80
-        },
-        png: {
-          quality: 80
-        }
-      }
-    }
   }
 }
