@@ -1,5 +1,5 @@
 import { effects } from 'redux-saga/dist/redux-saga'
-import { getData } from './api'
+import { getData } from '../api'
 
 const { call, put, takeLatest } = effects
 
@@ -23,6 +23,6 @@ function* fetchData({ payload }) {
   }
 }
 
-export default function* rootSaga() {
+export default function* global() {
   yield takeLatest('GETDATA', fetchData)
 }

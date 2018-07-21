@@ -12,6 +12,6 @@ const initState = {
 }
 const store = createStore(rootReducer, initState, applyMiddleware(sagaMiddleware))
 
-sagaMiddleware.run(rootSaga)
+rootSaga.forEach(saga => sagaMiddleware.run(saga))
 
 export default store
