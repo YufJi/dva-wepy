@@ -18,7 +18,9 @@
       return list
     },
     loading({ global }) {
+      console.log(global);
       const { loading } = global;
+
       return loading
     }
   })
@@ -43,7 +45,8 @@
 
     methods = {
       getData() {
-        dispatch({type: 'GETDATA', payload: {}})
+        console.log(11);
+        dispatch({type: 'global/fetchData', payload: {}})
       },
     }
 

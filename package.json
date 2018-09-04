@@ -14,6 +14,8 @@
   "license": "MIT",
   "dependencies": {
     "dayjs": "^1.6.10",
+    "dva": "^2.4.0",
+    "dva-core": "^1.4.0",
     "lodash": "^4.17.5",
     "qs": "^6.5.1",
     "redux": "^3.7.2",
