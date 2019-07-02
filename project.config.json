@@ -8,8 +8,10 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"appid": "touristappid",
+	"appid": "wxe74013f8e3c6e90f",
 	"projectname": "wepytest",
-	"miniprogramRoot": "./dist",
+	"miniprogramRoot": "dist/",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {}
 }
