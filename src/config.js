@@ -1,1 +1,1 @@
-export const prefix = 'https://m.ctrip.com/hitched-api'
+export const prefix = 'http://lajifenleiapp.com'

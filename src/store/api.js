@@ -2,7 +2,7 @@ import { get } from '@/service/base'
 
 export function getData(params) {
   return get({
-    path: '/v1/vehicle/category.json',
+    path: '/sk/%E6%89%8B%E6%9C%BA',
     params,
   })
 }

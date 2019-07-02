@@ -4,7 +4,7 @@ let app
 let store
 let dispatch
 
-function createApp(opt) {
+export default function createApp(opt) {
   app = create(opt)
 
   if (!global.registered) opt.models.forEach(model => app.model(model))
@@ -18,11 +18,4 @@ function createApp(opt) {
 
   app.dispatch = dispatch
   return app
-}
-
-export default {
-  createApp,
-  getDispatch() {
-    return app.dispatch
-  }
 }

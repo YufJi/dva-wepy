@@ -3,12 +3,12 @@
 <script>
 import wepy from 'wepy'
 import 'wepy-async-function'
-import dva from './dva'
+import createApp from './dva'
 import models from './model'
 
 import { setStore } from 'wepy-redux'
 
-const dvaApp = dva.createApp({
+const dvaApp = createApp({
   initialState: {},
   models: models,
 })
