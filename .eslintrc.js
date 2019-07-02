@@ -55,7 +55,7 @@ module.exports = {
     "comma-spacing": [2, { "before": false, "after": true }], // 逗号前没空格，后有空格
     "max-len": [2, { "code": 120, "tabWidth": 2, "ignoreComments": true, "ignoreStrings": true, "ignoreUrls": true }], // 一行最长多少
     "semi": [1], // 语句分号结尾
-    "no-console": [1], // 是否能有console
+    "no-console": [0], // 是否能有console
     "no-return-assign": 0, //在return语句中使用赋值语句
     "no-new-func": 1, //使用new Function
     "no-unused-expressions": 0,

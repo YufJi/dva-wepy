@@ -1,5 +1,5 @@
 
-import { create } from './lib/dva-core'
+import { create } from 'dva-core'
 let app
 let store
 let dispatch

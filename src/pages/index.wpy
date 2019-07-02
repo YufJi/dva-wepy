@@ -1,6 +1,5 @@
-<style lang="less" scoped>
+<style lang="less" scoped></style>
 
-</style>
 <template>
   <button type="button" name="button" @tap="getData">发请求</button>
   <view>{{loading ? '加载中。。。' : '加载完成！'}}</view>
